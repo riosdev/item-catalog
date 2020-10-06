@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+	<div class="card-header">
+		Grupos Alimentares
+	</div>
+	<ul class="list-group list-group-flush">
+		{% for food_group in grupos_alimentares %}
+		<div class="list-group-item">
+			<p><a href="{{url_for('exibirAlimentos', food_group_id=food_group.id)}}">{{food_group.name}}</a></p>
+			<div class="btn-group btn-group-sm" role="group">
+				<a class="btn" href="{{url_for('modificarGrupoAlimentar',food_group_id=food_group.id)}}">Modificar</a>
+				<a class="btn" href="{{url_for('apagarGrupoAlimentar',food_group_id=food_group.id)}}">Apagar</a>
+			</div>
+
+		</div>
+		{% endfor %}
+	</ul>
+</div>
+{% endblock %}

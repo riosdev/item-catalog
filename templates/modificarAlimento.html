@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+	<div class="card-header">
+		Modificar Alimento
+	</div>
+	<form action="#" method='post'>
+	<div class="input-group mb-3 mt-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Nome</span>
+		</div>
+		<input type='text' class="form-control" required="true" size='30' name='name' placeholder = '{{item.name }}'>
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Descrição</span>
+		</div>
+		<input type='text' class="form-control" required="true" size='30' name='description' placeholder = '{{item.description}}'>
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Calorias</span>
+		</div>
+		<input type='text' class="form-control" required="true" size='30' name='calories' placeholder = '{{item.calories}}'>
+	</div>
+	<div class="input-group mb-3">
+		<div class="input-group-prepend">
+			<span class="input-group-text" id="basic-addon1">Peso</span>
+		</div>
+		<input type='text' class="form-control" required="true" size='30' name='weight' placeholder = '{{item.weight}}'>
+	</div>
+	<div class="btn-group" role="group">
+			<input class="btn btn-primary" type="submit" value="Modificar">
+			<a class="btn btn-link" href="{{url_for('exibirGruposAlimentares')}}"> Cancelar </a>
+	</div>
+	</form>
+</div>
+{% endblock %}

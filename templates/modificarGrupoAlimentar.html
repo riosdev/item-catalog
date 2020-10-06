@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+	<div class="card-header">
+		Modificar Grupo Alimentar
+	</div>
+	<form action="#" method='post'>
+		<div class="input-group mb-3 mt-3">
+			<div class="input-group-prepend">
+				<span class="input-group-text" id="basic-addon1">Nome</span>
+			</div>
+			<input type='text' size='30' required="true" name='name' placeholder='{{grupo_alimentar.name }}'>
+		</div>
+		<div class="btn-group" role="group">
+			<input class="btn btn-primary" type="submit" value="Modificar">
+			<a class="btn btn-link" href="{{url_for('exibirGruposAlimentares')}}"> Cancelar </a>
+		</div>
+	</form>
+</div>
+{% endblock %}
